@@ -4,8 +4,7 @@
   "description": "Scaffolding for React, Node, Express, Sequelize projects",
   "main": "start.js",
   "scripts": {
-    "start": "npm test & webpack --watch & nodemon start.js",
-    "test": "mocha --watch"
+    "start": "concurrently --kill-others \"webpack --watch\" \"nodemon ./server.js\""
   },
   "keywords": [],
   "author": "",
