@@ -1,9 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Routes} from './components';
-import './App.css';
+
+var App = React.createClass({
+  render: () => {
+    return (
+      <div>
+        hello world!
+      </div>
+    )
+  }
+})
 
 ReactDOM.render(
-  <Routes />,
+  <App />,
   document.getElementById('app')
 );
