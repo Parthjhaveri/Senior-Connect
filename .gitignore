@@ -1,4 +1,6 @@
 node_modules/
 package.json
 bundle/
+.DS_Store
 db.js
+
