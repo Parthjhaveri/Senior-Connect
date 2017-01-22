@@ -33,9 +33,5 @@ ReactDOM.render(
       	<Route path='/findnearbyusers' component={FindUsersMap} />
     </Route>
   </Router>,
-  document.getElementById('root')
+  document.getElementById('app')
 );
-
-
-
-
