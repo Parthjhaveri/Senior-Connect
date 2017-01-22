@@ -10,7 +10,7 @@ To start: `npm start`
 ## Testing
 You can add new tests in the `test` folder.
 
-To test: `npm test`
+To test: `npm testttttttttttttttttttttttttttt`
 
 Your tests are also automatically called as part of `npm start`
 
