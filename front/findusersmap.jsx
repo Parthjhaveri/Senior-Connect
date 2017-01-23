@@ -27,7 +27,7 @@ var FindUsersMap= React.createClass({
 
 	  		// that.setState({map: this.mapData})
 	  	})
-	     
+
 	  },
 
 	  render() {
@@ -39,14 +39,14 @@ var FindUsersMap= React.createClass({
 					</div>
 
 					  	<div id="map">
-					  	
-						  <iframe className="mapmap" src="//www.google.com/maps/embed/v1/place?q=Harrods,Brompton%20Rd,%20UK
+
+						  <iframe className="mapmap" src="//www.google.com/maps/embed/v1/place?q=saggio,New+York+City
 						      &zoom=17
 						      &key=AIzaSyApoxbxFhH0U8RG4_J9vrt5OSGAoUdXoWo">
 						  </iframe>
 
 						</div>
-					 
+
 
 			 	 </div>
 	    )

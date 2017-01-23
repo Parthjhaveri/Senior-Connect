@@ -19,6 +19,16 @@ var LookingHelpForm= React.createClass({
       textBox: ''
     }
   },
+  updatePantry(e) {
+    this.setState({textBox: e.currentTarget.value}, function() {
+      // for (let i = 0; i < this.state.pantryList.length; i++){
+      //   if (this.state.pantryList[i].name = this.state.textBox) {
+      //     this.state.pantryLocation = this.state.pantryList[i]
+      //   }
+      // }
+      this.setState({pantryLocation: this.state.textBox})
+    })
+  },
   textBoxUpdate(e) {
     this.setState({textBox: e.currentTarget.value})
   },
@@ -58,7 +68,7 @@ var LookingHelpForm= React.createClass({
                 newObj.name = ele.provider_name
                 newPantryList.push(newObj)
                 })
-              this.setState({pantryList: newPantryList}, function() {
+              this.setState({pantryList: newPantryList}, () => {
                 this.increaseCounter()
                 this.setState({textBox: ''})
               })
@@ -67,33 +77,45 @@ var LookingHelpForm= React.createClass({
         })
       break;
       case 3:
-        This
+        this.setState({pantryLocation: this.state.pantryList})
       break;
       }
     },
   render: function() {
+    let mainView = null
     let pantryList = null
     if (this.state.pantryList.length >= 1) {
       let options = []
       this.state.pantryList.forEach((ele, ind) => {
         options.push(<option key={ind} value={ele.name}>{ele.name}</option>)
       })
-      pantryList = <div><select id='pantries' onChange={this.textBoxUpdate}>{options}</select></div>
+      pantryList = <div><select id='pantries' onChange={this.updatePantry}>{options}</select></div>
+    }
+    if (this.state.pantryLocation) {
+      let src = "//www.google.com/maps/embed/v1/place?q=" + this.state.pantryLocation + ",New+York&zoom=17&key=AIzaSyApoxbxFhH0U8RG4_J9vrt5OSGAoUdXoWo"
+        mainView =
+        <iframe className="mapmap" src={src}>
+        </iframe>
+
+      } else {
+        mainView =
+          <div className="seekingHelpForm" id="namebanner">
+
+          <div className="namebanner">
+            <center><h2>{this.state.bouncingBall[this.state.counter]}</h2></center>
+          </div>
+          {pantryList}
+          <input id='bouncingBall' type="text" className="nameinput" onChange={this.textBoxUpdate} value={this.state.textBox} />
+          <br />
+            <button className="namesubmit" onClick={this.handleSubmit}>SUBMIT</button>
+          </div>
+
     }
     return (
 			 <div className="seekingHelpPage">
 
 			 	<center>
-			 		<div className="seekingHelpForm" id="namebanner">
-
-				 		<div className="namebanner">
-				 			<center><h2>{this.state.bouncingBall[this.state.counter]}</h2></center>
-				 		</div>
-            {pantryList}
-			 			<input id='bouncingBall' type="text" className="nameinput" onChange={this.textBoxUpdate} value={this.state.textBox} />
-			 			<br />
-			 				<button className="namesubmit" onClick={this.handleSubmit}>SUBMIT</button>
-			 		</div>
+          {mainView}
 			 	</center>
 
 		 	 </div>
