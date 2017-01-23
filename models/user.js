@@ -5,11 +5,11 @@ var User = sequelizeConnection.define('user',{
 	firstName: Sequelize.STRING,
 	lastName: Sequelize.STRING,
 	zip: Sequelize.INTEGER,
-	pantryLocation: Sequelize.INTEGER,
-	location: Sequelize.INTEGER,
-	birthDate: Sequelize.DATE,
-	password: Sequelize.STRING,
-	isAvailable: Sequelize.BOOLEAN
+	pantryLocation: Sequelize.STRING,
+	location: Sequelize.STRING,
+	isAvailable: Sequelize.BOOLEAN,
+	beacon: Sequelize.BOOLEAN
+
 });
 
 User.sync()

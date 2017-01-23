@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import CSS from './App.css'
 import LookingHelpForm from './lookingForHelpForm.jsx'
+import $ from 'jquery'
 import { IndexRoute,Link, Router, Route, browserHistory, hashHistory } from 'react-router';
 
 var Home = React.createClass({
@@ -34,14 +35,14 @@ var Home = React.createClass({
 
 				  	<Link to="/seekinghelp">
 					  <div className="col-md-6" id="leftBox">
-					  	
+
 					  	<center>I need a <strong>Service</strong></center>
 
 					  	<hr className="whiteboxhr" />
 
 					  	<center>
 					  		<p id="seniorinst">
-					  			Seniors may click here to 
+					  			Seniors may click here to
 					  			find a list of <strong>helpers</strong><br/>
 					  			in their close vicinity
 					  		</p>
@@ -51,16 +52,16 @@ var Home = React.createClass({
 
 					  </div>
 					</Link>
-				  
+
 				  <div className="col-md-6" id="rightBox">
-				  	
+
 				  	<center>I'm looking to help out!</center>
 
 				  		<hr className="boxhr" />
 
 				  			<center>
 						  		<p id="seniorinst">
-						  			Volunteers may click here to 
+						  			Volunteers may click here to
 						  			find a list of <strong>Seniors</strong><br/>
 						  			in their close vicinity who request a Service
 						  		</p>

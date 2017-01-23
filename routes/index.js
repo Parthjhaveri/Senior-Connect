@@ -9,15 +9,22 @@ router.route('./api/createUser')
     zip: req.body.zip,
     pantryLocation: req.body.pantryLocation,
     location: req.body.location,
-    birthDate: req.body.birthDate,
-    password: req.body.password,
-    isAvailable: req.body.isAvailable
+    isAvailable: req.body.isAvailable,
+    beacon: req.body.isAvailable,
+    eta: req.body.eta,
+    helper: req.body.helper,
+    helpee: req.body.helpee
   }).then(() => {
     res.sendStatus(200)
   }).catch((err) => {
     console.log(err)
     res.sendStatus(500)
   })
+})
+
+router.route('./api/update/:id')
+.post((req, res) => {
+
 })
 
 router.route('./api/getAllUsers')
