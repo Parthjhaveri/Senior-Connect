@@ -5,7 +5,7 @@
   "main": "start.js",
   "scripts": {
     "start": "concurrently --kill-others \"webpack --watch\" \"nodemon ./server.js\"",
-    "build": "node scripts/build.js",
+    "build": "node scripts/server.js",
     "test": "jest --watch --env=jsdom"
   },
   "keywords": [],
