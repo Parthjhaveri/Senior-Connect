@@ -1,0 +1,6 @@
+{
+	"name": "SeniorConnect",
+	"description": "A service-exchange App that connects Seniors in the community to younger individuals for an exchange of services. Youngsters volunteer to help Senior Citizens with any services they may need (helping them with Groceries, running errands, handy-work etc.). In exchange, Seniors can volunteer to pay it forward by helping youngsters with mentorship, help with academics or professional guidance.",
+	"repository": "https://github.com/Rumthorp/SeniorConnect",
+	"keywords": ["node", "express", "static"]
+}
