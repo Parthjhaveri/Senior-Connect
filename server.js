@@ -5,8 +5,8 @@ var Sequelize = require('sequelize')
 
 
 
-const sequelizeConnection = require('./db');
-// let sequelizeConnection = process.env.NODE_ENV === 'production' ? new Sequelize(process.env.DATABASE_URL) : new Sequelize('postgres://parthjhaveri@localhost:5432');
+// const sequelizeConnection = require('./db');
+const sequelizeConnection = process.env.NODE_ENV === 'production' ? new Sequelize(process.env.DATABASE_URL) : new Sequelize('postgres://parthjhaveri@localhost:5432/seniorconnect');
 const User = require('./models/user.js')
 
 
